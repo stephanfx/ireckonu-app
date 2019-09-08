@@ -1,16 +1,30 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ProfilesComponent } from './profiles.component';
 import { ProfilesRoutingModule } from './profiles-routing.module';
-import { ProfilesListComponent } from './profiles-list/profiles-list.component';
-import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
-import {MatTableModule} from '@angular/material/table';
+import {
+  MatTableModule,
+  MatSortModule,
+  MatPaginatorModule,
+  MatIconModule,
+  MatInputModule,
+  MatButtonModule,
+  MatTabsModule
+} from '@angular/material';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
-  declarations: [ ProfilesRoutingModule.components, ProfilesListComponent, ProfileDetailComponent ],
+  declarations: [ProfilesComponent, DetailsComponent],
   imports: [
     CommonModule,
     ProfilesRoutingModule,
-    MatTableModule
-  ],
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    MatIconModule,
+    MatInputModule,
+    MatButtonModule,
+    MatTabsModule
+  ]
 })
-export class ProfilesModule { }
+export class ProfilesModule {}
