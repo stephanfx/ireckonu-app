@@ -1,16 +1,25 @@
 @import '../../../theme/variables.scss';
 
+.container {
+  width: 1145px;
+  margin: 0 auto;
+}
+
 .header {
   background: $header;
+  color: #fff;
+  height: 186px;
   padding: 10px 20px;
+  margin-bottom: -70px;
 }
 
 .section {
   display: flex;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .quick-facts {
+  background: #fff;
   font-size: 14px;
   width: 24%;
   min-height: 200px;
@@ -30,6 +39,10 @@
   }
   &__content {
     font-size: 12px;
+    margin-bottom: 20px;
+    p {
+      margin: 0;
+    }
   }
 }
 
@@ -57,7 +70,11 @@
 }
 
 .profile-tabs {
-  width: 80%;
+  width: 60%;
+  .mat-tab-label {
+    color: #fff;
+  }
+  padding-left: 20px;
 }
 
 // codepen for static donut chart: https://codepen.io/Hyungsub08/pen/yLBPJKW
