@@ -23,6 +23,7 @@ export class ProfilesComponent implements OnInit, AfterViewInit {
   dataSource = new MatTableDataSource<IProfile>();
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  errorOccurred = false;
 
   constructor(private apiService: ApiService, private router: Router) {}
 
@@ -33,6 +34,12 @@ export class ProfilesComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
+    // only filter on email, name and last name
+    this.dataSource.filterPredicate = (data: IProfile, filter: string) => {
+      const searchString =
+        data.email + data.first_name.toLocaleLowerCase() + data.last_name.toLocaleLowerCase();
+      return searchString.indexOf(filter) > -1;
+    };
   }
 
   doFilter(value: string) {
@@ -42,6 +49,9 @@ export class ProfilesComponent implements OnInit, AfterViewInit {
   getProfiles() {
     this.apiService.getData().subscribe((profiles: IProfile[]) => {
       this.dataSource.data = profiles;
+      this.errorOccurred = true;
+    }, error => {
+      this.dataSource.data = [];
     });
   }
 

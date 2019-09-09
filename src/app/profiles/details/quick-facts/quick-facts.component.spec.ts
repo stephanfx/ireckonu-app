@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { QuickFactsComponent } from './quick-facts.component';
+import { MatIconModule } from '@angular/material';
 
 describe('QuickFactsComponent', () => {
   let component: QuickFactsComponent;
@@ -8,7 +9,8 @@ describe('QuickFactsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QuickFactsComponent ]
+      declarations: [ QuickFactsComponent ],
+      imports: [ MatIconModule ]
     })
     .compileComponents();
   }));

@@ -1,33 +1,14 @@
 @import '../../../theme/variables.scss';
 
-.banner {
-  height: 186px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: $header;
-  z-index: -1;
+.profile-img {
+  border-radius: 50px;
+  background: $light;
+  text-align: baseline;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
 }
 
-.container {
-  width: 1145px;
-  margin: 0 auto;
-}
-
-.header {
-  background: $header;
-  color: $font-light;  
-  padding: 10px 20px;
-  h1 {
-    font-weight: 400;
-  }
-}
-
-.section {
-  display: flex;
-  padding: 0 20px;
-}
 
 
 .quick-facts {
@@ -36,15 +17,12 @@
 
 .profile-tabs {
   flex-basis: 75%;
-  padding-left: 20px;
-  .mat-tab-label {
-    color: $font-light;
-  }
 
   .profile-detail-border {
     background: $light;
     padding: 10px;
-    box-shadow: 0px 0px 5px $light-grey;
+    margin: 50px 10px 10px 20px;
+    box-shadow: 0px 0px 5px #ccc;
   }
 
   .profile-detail {
@@ -52,6 +30,9 @@
     padding: 10px;
     box-shadow: 0px 0px 5px $light-grey;
     border: 1px solid darken($light-grey, 10%);
+    h1 {
+      font-weight: 400;
+    }
   }
   .profile-table {
     background: $light;
@@ -60,3 +41,10 @@
   }
 }
 
+::ng-deep .mat-tab-label .mat-tab-label-content {
+    color: $font-light !important;
+  }
+
+::ng-deep .mat-tab-list {
+  margin-left: 20px;
+}

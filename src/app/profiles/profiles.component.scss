@@ -11,21 +11,12 @@ table {
   width: 100%;
 }
 
+.columns {
+  flex-direction: column;
+}
+
 th.mat-sort-header-sorted {
   color: black;
-}
-
-.header {
-  background: $header;
-  padding: 10px 20px;
-  h1 {
-    color: #fff;
-  }
-}
-
-.table {
-  background: $light-grey;
-  padding: 10px;
 }
 
 .searchbar {

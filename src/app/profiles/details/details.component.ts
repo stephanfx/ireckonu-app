@@ -17,7 +17,6 @@ export class DetailsComponent implements OnInit {
       const id = +params.get('id');
       if (id) {
         this.apiService.getProfileById(id).subscribe((profile: IProfile) => {
-          console.log('TCL: DetailsComponent -> ngOnInit -> profile', profile);
           this.profile = profile;
         });
       }

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProfileRowComponent } from './profile-row.component';
+import { MatIconModule } from '@angular/material';
 
 describe('ProfileRowComponent', () => {
   let component: ProfileRowComponent;
@@ -8,7 +9,8 @@ describe('ProfileRowComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProfileRowComponent ]
+      declarations: [ ProfileRowComponent ],
+      imports: [ MatIconModule ]
     })
     .compileComponents();
   }));
