@@ -6,16 +6,18 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
+  url = 'https://profiles-list.firebaseio.com/Data.json';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   getData() {
-    return this.httpClient.get('https://profiles-list.firebaseio.com/Data.json');
+    return this.httpClient.get(this.url);
   }
 
   getProfileById(id: number) {
     id = id - 1;
-    return this.httpClient.get('https://profiles-list.firebaseio.com/Data.json?orderBy="$key"&equalTo="'
-    + id.toString() + '"').pipe(map(response => response[id]));
+    return this.httpClient
+      .get(this.url + '?orderBy="$key"&equalTo="' + id.toString() + '"')
+      .pipe(map(response => response[id]));
   }
 }
