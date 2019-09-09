@@ -1,12 +1,19 @@
 @import '../../../theme/variables.scss';
 
+$profile-image-size: 56px;
+
+.header > h1 {
+  align-items: center;
+  font-size: 28px;
+}
+
 .profile-img {
-  border-radius: 50px;
+  border-radius: $profile-image-size;
   background: $light;
   text-align: baseline;
-  height: 50px;
-  width: 50px;
-  margin: 10px;
+  height: $profile-image-size;
+  width: $profile-image-size;
+  margin: 0 10px;
 }
 
 .quick-facts {
@@ -19,7 +26,7 @@
   .profile-detail-border {
     background: $light;
     padding: 10px;
-    margin: 50px 10px 10px 20px;
+    margin: 30px 10px 10px 20px;
     box-shadow: 0px 0px 5px $box-shadow;
   }
 
@@ -28,7 +35,8 @@
     padding: 10px;
     box-shadow: 0px 0px 5px $light-grey;
     border: 1px solid darken($light-grey, 10%);
-    h1 {
+    h2 {
+      font-size: 17px;
       font-weight: 400;
     }
   }
@@ -40,9 +48,18 @@
 }
 
 ::ng-deep .mat-tab-label .mat-tab-label-content {
-    color: $font-light !important;
-  }
+  color: rgba($color: #fff, $alpha: 1.0) !important;
+  opacity: 1 !important;
+}
 
 ::ng-deep .mat-tab-list {
   margin-left: 20px;
+}
+
+::ng-deep .mat-ink-bar {
+  background-color: $light !important;
+}
+
+::ng-deep .mat-tab-header {
+    border-bottom: 1px solid rgba($color: #fff, $alpha: 1.0) !important;
 }

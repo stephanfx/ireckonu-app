@@ -13,8 +13,9 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$ireckonu-app-primary: mat-palette($mat-indigo);
-$ireckonu-app-accent: mat-palette($mat-pink, A200, A100, A400);
+// $ireckonu-app-primary: mat-palette($mat-indigo);
+$ireckonu-app-primary: mat-palette($mat-light-blue);
+$ireckonu-app-accent: mat-palette($mat-cyan, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $ireckonu-app-warn: mat-palette($mat-red);

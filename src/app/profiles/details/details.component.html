@@ -1,17 +1,17 @@
 <div class="banner"></div>
 <div class="container">
 <div class="header">
-  <h1>Profile: <div><img class="profile-img" src="{{profile?.photo}}"></div>{{ profile?.first_name + ' ' + profile?.last_name }}</h1>
+  <h1>Profile: <div><img matBadge="in" matBadgePosition="above after" class="profile-img" src="{{profile?.photo}}"></div>{{ profile?.first_name + ' ' + profile?.last_name }}</h1>
 </div>
 <div class="section">
   <app-quick-facts class="quick-facts"></app-quick-facts>
 
   <div class="profile-tabs">
-    <mat-tab-group>
-      <mat-tab label="Profile Detail" color="white">
+    <mat-tab-group [selectedIndex]="0">
+      <mat-tab label="Profile Detail">
         <div class="profile-detail-border">
         <div class="profile-detail">
-          <h1>Profile Detail</h1>
+          <h2>Profile Detail</h2>
           <div class="profile-table">
             <app-profile-row label="Prefix" [content]="profile?.prefix"></app-profile-row>
             <app-profile-row label="First name" [content]="profile?.first_name"></app-profile-row>

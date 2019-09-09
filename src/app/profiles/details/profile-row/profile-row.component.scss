@@ -1,21 +1,23 @@
 .profile-table__row {
   border-bottom: 1px solid #ddd;
   display: flex;
-  font-size: 14px;
+  align-items: center;
+  font-size: 10px;
   padding: 10px 15px;
   .row {
     &__label {
       flex-basis: 30%;
-      align-self: center;
     }
     &__content {
-      align-self: center;
       flex-basis: 60%;
       font-weight: bold;
     }
     &__action {
       .mat-icon {
         color: #ddd;
+        font-size: 13px;
+        height: 13px;
+        width: 13px;
       }
       flex-basis: 10%;
       text-align: right;
