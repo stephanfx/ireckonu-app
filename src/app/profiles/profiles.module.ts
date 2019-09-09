@@ -12,9 +12,11 @@ import {
   MatTabsModule
 } from '@angular/material';
 import { DetailsComponent } from './details/details.component';
+import { ProfileRowComponent } from './details/profile-row/profile-row.component';
+import { QuickFactsComponent } from './details/quick-facts/quick-facts.component';
 
 @NgModule({
-  declarations: [ProfilesComponent, DetailsComponent],
+  declarations: [ProfilesComponent, DetailsComponent, ProfileRowComponent, QuickFactsComponent],
   imports: [
     CommonModule,
     ProfilesRoutingModule,
