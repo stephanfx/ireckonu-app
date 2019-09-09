@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { MatInputModule, MatTableModule, MatIconModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { of } from 'rxjs';
 import { IProfile } from '../shared/interfaces';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ProfilesComponent', () => {
   let component: ProfilesComponent;
@@ -25,7 +26,8 @@ describe('ProfilesComponent', () => {
         MatTableModule,
         MatIconModule,
         MatPaginatorModule,
-        MatSortModule
+        MatSortModule,
+        BrowserAnimationsModule
       ],
       providers: [
         { provide: ApiService, useValue: apiMock },

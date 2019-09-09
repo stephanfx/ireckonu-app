@@ -9,8 +9,6 @@
   margin: 10px;
 }
 
-
-
 .quick-facts {
   flex-basis: 24%;
 }
@@ -22,7 +20,7 @@
     background: $light;
     padding: 10px;
     margin: 50px 10px 10px 20px;
-    box-shadow: 0px 0px 5px #ccc;
+    box-shadow: 0px 0px 5px $box-shadow;
   }
 
   .profile-detail {
@@ -37,7 +35,7 @@
   .profile-table {
     background: $light;
     width: 100%;
-    box-shadow: 0px 0px 5px $light-grey;
+    box-shadow: 0px 0px 5px $box-shadow;
   }
 }
 

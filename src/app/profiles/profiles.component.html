@@ -3,14 +3,18 @@
   <div class="header">
     <h1>Profiles</h1>
     <div class="searchbar">
-      <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter" />
-      <button mat-flat-button>
+      <div class="prefix">
+        <mat-icon>search</mat-icon>
+        <input type="text" matInput placeholder="Search Profiles" #searchFilter>
+      </div>
+      <button mat-flat-button (click)="doFilter(searchFilter.value)">
         <mat-icon aria-hidden="false" aria-label="search">search</mat-icon>
       </button>
     </div>
+
   </div>
   <div class="section columns">
-    <div *ngIf="dataSource.data.length > 0">
+    <div class="paginator-table" [ngClass]="{'hide': dataSource.filteredData.length === 0 || errorOccurred}">
       <table mat-table [dataSource]="dataSource" matSort>
         <ng-container matColumnDef="photo">
           <th mat-header-cell *matHeaderCellDef><mat-icon>sync_alt</mat-icon></th>
@@ -57,7 +61,7 @@
     <div class="notification" *ngIf="dataSource.filteredData.length === 0">
       No Data with the Filter
     </div>
-    <div class="error" *ngIf="errorOccurred === true">
+    <div class="error" *ngIf="errorOccurred">
       Oops! We could not load the data :(
     </div>
   </div>

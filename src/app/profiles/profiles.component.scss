@@ -1,4 +1,55 @@
 @import '../../theme/variables.scss';
+$searchbar-height: 50px;
+
+.header > h1 {
+  margin-bottom: 50px;
+}
+
+.searchbar {
+  display: flex;
+  align-items: stretch;
+  height: $searchbar-height;
+
+  .prefix {
+    display: flex;
+    flex-basis: 65%;
+    background: $light;
+    color: $font-normal;
+    align-items: center;
+    justify-content: center;
+    height: $searchbar-height;
+    padding-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0px 0px 2px darken($box-shadow, 40%);
+  }
+
+  .mat-input-element {
+    margin-right: 10px;
+  }
+  .mat-flat-button {
+    color: #fff;
+    background: #2076a2;
+  }
+}
+
+.columns {
+  flex-direction: column;
+}
+
+.paginator-table {
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0px 0px 5px $box-shadow;
+}
+
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
 .img {
   display: block;
   height: 50px;
@@ -7,23 +58,13 @@
   margin: 5px;
 }
 
-table {
-  width: 100%;
+.hide {
+  display: none;
 }
 
-.columns {
-  flex-direction: column;
+.notification {
+  align-self: center;
+  justify-self: center;
 }
 
-th.mat-sort-header-sorted {
-  color: black;
-}
 
-.searchbar {
-  display: flex;
-  .mat-input-element {
-    background: #fff;
-    padding: 10px 20px;
-    margin-right: 10px;
-  }
-}

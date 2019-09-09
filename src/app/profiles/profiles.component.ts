@@ -49,8 +49,8 @@ export class ProfilesComponent implements OnInit, AfterViewInit {
   getProfiles() {
     this.apiService.getData().subscribe((profiles: IProfile[]) => {
       this.dataSource.data = profiles;
-      this.errorOccurred = true;
     }, error => {
+      this.errorOccurred = true;
       this.dataSource.data = [];
     });
   }

@@ -6,12 +6,13 @@
   padding: 10px 20px;
   box-shadow: 0px 0px 5px #d5d5d5;
   &__header {
-    display: flex;
-    padding-bottom: 5px;
+    display: flex;    
+    align-items: center;
     border-bottom: 1px solid #d5d5d5;
+    margin-bottom: 10px;
     p {
       margin: 0;
-      width: 80%;
+      flex-grow: 1;
     }
     .mat-icon {
       color: $header;
@@ -24,6 +25,28 @@
       margin: 0;
     }
   }
+}
+
+.icon-content {
+  display: flex;
+  align-items: flex-start;
+  .icon {
+    &.user {
+      color: #d1ab40;
+    }
+    &.error {
+      color: $font-normal;
+    }
+  }
+  .content {
+    flex-grow: 1;
+  }
+}
+
+.rfm-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .content__facts {
@@ -134,4 +157,4 @@
   }
 } // mixin
 
-@include donut-chart('.chart2', 80, 40px, 5px, #e1e1e1, #fff, #48b2c1, #48b2c1, 15px);
+@include donut-chart('.chart2', 80, 40px, 5px, #e1e1e1, #fff, #48b2c1, $font-normal, 12px);
