@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProfilesComponent } from './profiles.component';
 import { ApiService } from '../core/services/api.service';
 import { Router } from '@angular/router';
-import { MatInputModule, MatTableModule, MatIconModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { MatInputModule, MatTableModule, MatIconModule, MatPaginatorModule, MatSortModule, MatProgressBarModule } from '@angular/material';
 import { of } from 'rxjs';
 import { IProfile } from '../shared/interfaces';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,6 +27,7 @@ describe('ProfilesComponent', () => {
         MatIconModule,
         MatPaginatorModule,
         MatSortModule,
+        MatProgressBarModule,
         BrowserAnimationsModule
       ],
       providers: [

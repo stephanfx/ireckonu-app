@@ -11,7 +11,9 @@
         <mat-icon aria-hidden="false" aria-label="search">search</mat-icon>
       </button>
     </div>
-
+  </div>
+  <div *ngIf="loading">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
   </div>
   <div class="section columns">
     <div class="paginator-table mat-elevation-z2" [ngClass]="{'hide': dataSource.filteredData.length === 0 || errorOccurred}">
@@ -58,11 +60,15 @@
 
       <mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"> </mat-paginator>
     </div>
-    <div class="notification" *ngIf="dataSource.filteredData.length === 0">
-      No Data with the Filter
+    <div class="notification" *ngIf="dataSource.filteredData.length === 0 && !loading">
+      <h2>No data found for '{{ searchFilter.value }}'</h2>
+      <p>Please restart your search.</p>
     </div>
     <div class="error" *ngIf="errorOccurred">
-      Oops! We could not load the data :(
+      <h2>Oops! We could not load the data. :(</h2>
+      <p>Please check that you are connected to internet and refresh the page.</p>
+      
     </div>
+
   </div>
 </div>

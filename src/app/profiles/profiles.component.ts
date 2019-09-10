@@ -24,6 +24,7 @@ export class ProfilesComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   errorOccurred = false;
+  loading = true;
 
   constructor(private apiService: ApiService, private router: Router) {}
 
@@ -47,10 +48,13 @@ export class ProfilesComponent implements OnInit, AfterViewInit {
   }
 
   getProfiles() {
+    this.loading = true;
     this.apiService.getData().subscribe((profiles: IProfile[]) => {
       this.dataSource.data = profiles;
+      this.loading = false;
     }, error => {
       this.errorOccurred = true;
+      this.loading = false;
       this.dataSource.data = [];
     });
   }
