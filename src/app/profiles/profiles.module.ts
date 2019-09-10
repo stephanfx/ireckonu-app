@@ -10,7 +10,8 @@ import {
   MatInputModule,
   MatButtonModule,
   MatTabsModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatBadgeModule
 } from '@angular/material';
 import { DetailsComponent } from './details/details.component';
 import { ProfileRowComponent } from './details/profile-row/profile-row.component';
@@ -28,7 +29,8 @@ import { QuickFactsComponent } from './details/quick-facts/quick-facts.component
     MatInputModule,
     MatButtonModule,
     MatTabsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatBadgeModule
   ]
 })
 export class ProfilesModule {}

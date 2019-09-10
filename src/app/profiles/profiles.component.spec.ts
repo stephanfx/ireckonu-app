@@ -3,7 +3,15 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProfilesComponent } from './profiles.component';
 import { ApiService } from '../core/services/api.service';
 import { Router } from '@angular/router';
-import { MatInputModule, MatTableModule, MatIconModule, MatPaginatorModule, MatSortModule, MatProgressBarModule } from '@angular/material';
+import {
+  MatInputModule,
+  MatTableModule,
+  MatIconModule,
+  MatPaginatorModule,
+  MatSortModule,
+  MatProgressBarModule,
+  MatBadgeModule
+} from '@angular/material';
 import { of } from 'rxjs';
 import { IProfile } from '../shared/interfaces';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -28,6 +36,7 @@ describe('ProfilesComponent', () => {
         MatPaginatorModule,
         MatSortModule,
         MatProgressBarModule,
+        MatBadgeModule,
         BrowserAnimationsModule
       ],
       providers: [
@@ -48,7 +57,7 @@ describe('ProfilesComponent', () => {
   });
 
   it('should redirect to detail view', () => {
-    const profile = {localid: 1} as IProfile;
+    const profile = { localid: 1 } as IProfile;
     component.redirectToView(profile);
     expect(routerMock.navigate).toHaveBeenCalledWith(['/profiles/1']);
   });
@@ -57,5 +66,4 @@ describe('ProfilesComponent', () => {
     component.doFilter(' TeSt   ');
     expect(component.dataSource.filter).toBe('test');
   });
-
 });

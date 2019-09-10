@@ -7,13 +7,20 @@ $profile-image-size: 56px;
   font-size: 28px;
 }
 
-.profile-img {
-  border-radius: $profile-image-size;
-  background: $light;
-  text-align: baseline;
-  height: $profile-image-size;
+.badge-wrapper {
+  display: flex;
+  align-items: center;
+  justify-items: center;
   width: $profile-image-size;
+  height: $profile-image-size;
   margin: 0 10px;
+  
+  .profile-img {
+    border-radius: $profile-image-size;
+    background: $light;
+    text-align: center;
+    width: 100%;   
+  }
 }
 
 .quick-facts {

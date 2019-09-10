@@ -52,4 +52,10 @@
   .mat-ink-bar {
     background-color: #ffffff !important;
   }
+
+  .mat-badge-content {
+    background: mat-color($mat-blue-grey, 700) !important;
+    top: -5px !important;
+    right: -5px !important;
+  }
 }

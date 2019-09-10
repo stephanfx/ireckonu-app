@@ -1,7 +1,7 @@
 <div class="banner"></div>
 <div class="container">
 <div class="header">
-  <h1>Profile: <div><img matBadge="in" matBadgePosition="above after" class="profile-img" src="{{profile?.photo}}"></div>{{ profile?.first_name + ' ' + profile?.last_name }}</h1>
+  <h1>Profile: <div class="badge-wrapper" matBadge="in" matBadgePosition="above after"><img class="profile-img" src="{{profile?.photo}}"></div>{{ profile?.first_name + ' ' + profile?.last_name }}</h1>
 </div>
 <div class="section">
   <app-quick-facts class="quick-facts"></app-quick-facts>
@@ -27,14 +27,14 @@
         </div>
       </mat-tab>
       <mat-tab label="Profile ID's">
-        <div class="profile-detail">
+        <div class="profile-detail-border  mat-elevation-z2">
 
         <h1>Some more tab content</h1>
         <p>...</p>
         </div>
       </mat-tab>
       <mat-tab label="Activity Timeline">
-        <div class="profile-detail">
+        <div class="profile-detail-border  mat-elevation-z2">
         <h1>Some more tab content</h1>
         <p>...</p>
         </div>
