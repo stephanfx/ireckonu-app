@@ -27,13 +27,11 @@ $profile-image-size: 56px;
     background: $light;
     padding: 10px;
     margin: 30px 10px 10px 20px;
-    box-shadow: 0px 0px 5px $box-shadow;
   }
 
   .profile-detail {
     background: $light-grey;
     padding: 10px;
-    box-shadow: 0px 0px 5px $light-grey;
     border: 1px solid darken($light-grey, 10%);
     h2 {
       font-size: 17px;
@@ -43,23 +41,14 @@ $profile-image-size: 56px;
   .profile-table {
     background: $light;
     width: 100%;
-    box-shadow: 0px 0px 5px $box-shadow;
   }
 }
 
-::ng-deep .mat-tab-label .mat-tab-label-content {
-  color: rgba($color: #fff, $alpha: 1.0) !important;
-  opacity: 1 !important;
-}
+// ::ng-deep .mat-tab-label .mat-tab-label-content {
+//   color: rgba($color: #fff, $alpha: 1.0) !important;
+//   opacity: 1 !important;
+// }
 
 ::ng-deep .mat-tab-list {
   margin-left: 20px;
-}
-
-::ng-deep .mat-ink-bar {
-  background-color: $light !important;
-}
-
-::ng-deep .mat-tab-header {
-    border-bottom: 1px solid rgba($color: #fff, $alpha: 1.0) !important;
 }

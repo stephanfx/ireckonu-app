@@ -3,18 +3,18 @@
   <div class="header">
     <h1>Profiles</h1>
     <div class="searchbar">
-      <div class="prefix">
+      <div class="prefix mat-elevation-z2">
         <mat-icon>search</mat-icon>
         <input type="text" matInput placeholder="Search Profiles" #searchFilter>
       </div>
-      <button mat-flat-button (click)="doFilter(searchFilter.value)">
+      <button mat-flat-button color="accent" (click)="doFilter(searchFilter.value)">
         <mat-icon aria-hidden="false" aria-label="search">search</mat-icon>
       </button>
     </div>
 
   </div>
   <div class="section columns">
-    <div class="paginator-table" [ngClass]="{'hide': dataSource.filteredData.length === 0 || errorOccurred}">
+    <div class="paginator-table mat-elevation-z2" [ngClass]="{'hide': dataSource.filteredData.length === 0 || errorOccurred}">
       <table mat-table [dataSource]="dataSource" matSort>
         <ng-container matColumnDef="photo">
           <th mat-header-cell *matHeaderCellDef><mat-icon>sync_alt</mat-icon></th>

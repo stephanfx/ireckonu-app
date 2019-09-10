@@ -9,10 +9,10 @@
   <div class="profile-tabs">
     <mat-tab-group [selectedIndex]="0">
       <mat-tab label="Profile Detail">
-        <div class="profile-detail-border">
+        <div class="profile-detail-border mat-elevation-z2">
         <div class="profile-detail">
           <h2>Profile Detail</h2>
-          <div class="profile-table">
+          <div class="profile-table mat-elevation-z2">
             <app-profile-row label="Prefix" [content]="profile?.prefix"></app-profile-row>
             <app-profile-row label="First name" [content]="profile?.first_name"></app-profile-row>
             <app-profile-row label="Last name" [content]="profile?.last_name"></app-profile-row>

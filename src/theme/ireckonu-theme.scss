@@ -1,0 +1,55 @@
+@mixin ireckonu-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $background: map-get($map: $theme, $key: background);
+  $foreground: map-get($theme, foreground);
+
+  .banner {
+    background: mat-color($primary);
+  }
+
+  .header {
+    color: mat-color($primary, '500-contrast');    
+  }
+
+  .prefix {
+    background: rgba(white, 1);
+    color: mat-color($mat-blue-gray, 900);
+  }
+
+  .quick-facts {
+    background: rgba($color: #ffffff, $alpha: 1);
+    &__header {
+      border-bottom: 1px solid #d5d5d5;
+
+    }
+    .icon-content {
+      .icon {
+        &.user {
+          color: rgba(#d1ab40, 1);
+        }
+      }
+    }
+
+    .content__facts {
+      .mat-icon {
+        color: mat-color($mat-grey, 400);
+      }
+    }
+  }
+
+  .mat-tab-label {
+    color: rgba($color: #ffffff, $alpha: 1.0);
+    &-active {
+      opacity: 1 !important;
+    }
+  }
+
+  .mat-tab-header {
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .mat-ink-bar {
+    background-color: #ffffff !important;
+  }
+}

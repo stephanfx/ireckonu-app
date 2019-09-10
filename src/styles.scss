@@ -1,8 +1,9 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
 @import 'theme/variables.scss';
+@import 'theme/ireckonu-theme.scss';
+
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -15,13 +16,17 @@
 // hue. Available color palettes: https://material.io/design/color/
 // $ireckonu-app-primary: mat-palette($mat-indigo);
 $ireckonu-app-primary: mat-palette($mat-light-blue);
-$ireckonu-app-accent: mat-palette($mat-cyan, A200, A100, A400);
+$ireckonu-app-accent: mat-palette($mat-cyan, 800);
 
 // The warn palette is optional (defaults to red).
 $ireckonu-app-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$ireckonu-app-theme: mat-light-theme($ireckonu-app-primary, $ireckonu-app-accent, $ireckonu-app-warn);
+$ireckonu-app-theme: mat-light-theme(
+  $ireckonu-app-primary,
+  $ireckonu-app-accent,
+  $ireckonu-app-warn
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -30,35 +35,44 @@ $ireckonu-app-theme: mat-light-theme($ireckonu-app-primary, $ireckonu-app-accent
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { background: $light-grey; margin: 0; color: $font-normal; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.banner {
-  height: 185px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: $header;
-  z-index: -1;
+
+@include ireckonu-theme($ireckonu-app-theme);
+
+html,
+body {
+  height: 100%;
 }
-
-.container {
-  width: 1145px;
-  margin: 0 auto;
+body {
+  background: mat-color($mat-grey, 100);
+  margin: 0;
+  color: mat-color($mat-blue-grey, 900);
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
 .header {
-  background: $header;
-  color: $font-light;  
   padding: 10px 20px;
-  h1 {
-    display: flex;
-    font-weight: 400;
-  }
+    h1 {
+      display: flex;
+      font-weight: 400;
+    }
 }
 
-.section {
-  display: flex;
-  padding: 0 20px;
-}
+  .section {
+    display: flex;
+    padding: 0 20px;
+  }
+
+  .banner {
+    height: 185px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .container {
+    width: 1145px;
+    margin: 0 auto;
+  }
