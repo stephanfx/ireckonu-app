@@ -31,7 +31,7 @@ https://stephanfx.github.io/ireckonu-app/
 
 ## Development server
 
-To start the app, ensure you have `NodeJS` install, then please run the following commands in order:
+To start the app, ensure you have `NodeJS` installed, then please run the following commands in order:
   * `npm install`
   * `ng serve --open`
 
