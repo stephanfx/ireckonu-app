@@ -26,9 +26,16 @@ You can use this public API: https://profiles-list.firebaseio.com/Data.json
   * HTML5
   * Angular material https://material.angular.io/
 
+## Github Page
+https://stephanfx.github.io/ireckonu-app/
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To start the app, ensure you have `NodeJS` install, then please run the following commands in order:
+  * `npm install`
+  * `ng serve --open`
+
+It should open the browser at `http://localhost:4200/`, else navigate in the browser to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
